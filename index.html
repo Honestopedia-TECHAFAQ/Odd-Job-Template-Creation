@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need a Hand? Odd Job Service</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header, .footer {
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid label {
+            font-weight: normal;
+        }
+
+        .pricing, .availability, .location, .services, .experience {
+            margin: 20px 0;
+        }
+
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .availability-grid input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .availability-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Icons */
+        .services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-list li {
+            padding: 5px 0;
+        }
+
+        .services-list li:before {
+            content: '✔';
+            color: #3498db;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Need a Hand?</h1>
+            <p>Fill out your details below to advertise your odd job services!</p>
+        </div>
+        <div class="grid">
+            <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="contact">Contact Information</label>
+                <input type="text" id="contact" placeholder="Phone or email">
+            </div>
+        </div>
+        <div class="services">
+            <h2>Services Offered</h2>
+            <ul class="services-list">
+                <li>Yard Work</li>
+                <li>Dog Walking</li>
+                <li>House Cleaning</li>
+                <li>Furniture Assembly</li>
+                <li>Personal Errands</li>
+                <li>Painting</li>
+                <li>Home Repairs</li>
+            </ul>
+        </div>
+        <div class="pricing">
+            <h2>Pricing</h2>
+            <label for="rate">Hourly Rate</label>
+            <input type="text" id="rate" placeholder="$ per hour">
+
+            <label for="min-hours">Minimum Hours Required</label>
+            <input type="text" id="min-hours" placeholder="e.g. 2 hours">
+        </div>
+        <div class="availability">
+            <h2>Availability</h2>
+            <div class="availability-grid">
+                <label><input type="checkbox"> Monday to Friday</label>
+                <label><input type="checkbox"> Weekends</label>
+                <label><input type="checkbox"> Morning</label>
+                <label><input type="checkbox"> Afternoon</label>
+                <label><input type="checkbox"> Evening</label>
+                <label><input type="checkbox"> Custom Hours</label>
+            </div>
+        </div>
+
+        <div class="location">
+            <h2>Location Served</h2>
+            <input type="text" id="location" placeholder="Enter the areas/city you serve">
+        </div>
+        <div class="experience">
+            <h2>Experience / Testimonials</h2>
+            <textarea rows="4" placeholder="Describe your experience or add client testimonials"></textarea>
+        </div>
+
+        <div class="footer">
+            <p>Follow us on social media for updates!</p>
+            <a href="#" class="btn">Facebook</a>
+            <a href="#" class="btn">Instagram</a>
+        </div>
+    </div>
+
+   
+
+</body>
+</html>
